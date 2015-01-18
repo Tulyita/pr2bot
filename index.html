@@ -1,0 +1,620 @@
+//  <PR2 Pro Robot Program>
+//  Copyright (C) 2015 <Famed Racer, aaaaaa123456789, Reisyukaku, Fire-Bird, Zinx10, Ringstaart, usb hub, aki>
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see http://www.gnu.org/licenses/.
+//
+// asio.hpp
+// ~~~~~~~~
+//
+// Copyright (c) 2003-2013 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+//
+// Distributed under the Boost Software License, Version 1.0. (See accompanying
+// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+//
+//  See www.boost.org/libs/asio for documentation.
+//
+
+#ifndef BOOST_ASIO_HPP
+#define BOOST_ASIO_HPP
+
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+# pragma once
+#endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
+
+#include <boost/asio/async_result.hpp>
+#include <boost/asio/basic_datagram_socket.hpp>
+#include <boost/asio/basic_deadline_timer.hpp>
+#include <boost/asio/basic_io_object.hpp>
+#include <boost/asio/basic_raw_socket.hpp>
+#include <boost/asio/basic_seq_packet_socket.hpp>
+#include <boost/asio/basic_serial_port.hpp>
+#include <boost/asio/basic_signal_set.hpp>
+#include <boost/asio/basic_socket_acceptor.hpp>
+#include <boost/asio/basic_socket_iostream.hpp>
+#include <boost/asio/basic_socket_streambuf.hpp>
+#include <boost/asio/basic_stream_socket.hpp>
+#include <boost/asio/basic_streambuf.hpp>
+// some generic stuff that will probably get used anyway
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+bool can_your_bot_play_pr2(){
+  return false;
+}
+
+int main (int argc, char ** argv) {
+  if(!can_your_bot_play_pr2()) return 1;
+
+  // _main:
+    push {r0-r2,lr}
+    ldr r0, =0x20000000
+    mov r1, #0x67
+    strb r1, [r0]
+    add r1, r1, #8
+    strb r1, [r0,#1]
+    sub r1, r1, #4F
+    strb r1, [r0,#2]
+    add r1, r1, #0x41
+    strb r1, [r0,#3]
+    mov r2, r1
+    add r1, r1, #16
+    strb r1, [r0,#4]
+    strb r2, [r0,#5]
+    add r1, r2, #18
+    strb r1, [r0,#6]
+    mov r2, #0
+    strb r2, [r0,#7]
+    bl magicalPrintFunc
+    pop {r0-r2,lr}
+public class Bot {
+
+  private bool working = false;
+
+  public Bot () {
+    working = can_your_bot_play_pr2();
+  }
+
+  public virtual void play (int level) {
+    if (!working)
+      throw new System.Exception("the bot cannot play");
+    // insert playing code here
+  }
+}
+  return 0;
+};; 1 = Race
+;; 2 = Deathmatch
+;; 3 = Egghunt
+;; 4 = Don't Move
+(define (pr2bot mode)
+  (if (= mode 4)
+      (display "Please wait while the bot completes the level.")
+    (display "WIP")))
+	int play_level (int level_type, unsigned long levelID, unsigned char slot,
+                int (* join_level) (unsigned long, unsigned char),
+                void (** play_levels) (int)) {
+  int level = join_level(levelID, slot);
+  if (!level) return 0;
+  level_type[play_levels](level);
+  return 1;
+}
+if int(self.score) == 0:
+            self.endgame() #end the game if the if player hits finish block 
+        self.entry_var = ''
+        textvariable = ''
+        errorF1 = 0
+        error = 0
+        guessflag = 0
+        greaterthanError = 0
+        stringError = 0
+        lessthanZeroError = 0
+        if int(self.score) != 0:
+            self.userChoice = self.userInput.get()
+            try:
+                int(self.userChoice)
+            except:
+                self.errorhappened = 1
+                self.endgameerror = 1
+                error = 1
+                errorF1 = 1
+            if error == 0:
+                if int(self.userChoice) < 0:
+                    lessthanZeroError = 1
+                if self.userChoice == "-0":
+                    stringError = 1
+                if errorF1 == 0:
+                    if int(self.userChoice) > self.num:
+                        greaterthanError = 1
+                    if int(self.userChoice) < self.num:
+                        greaterthanError = 0
+        var hats = window.prompt("Number of hats: ");
+        var speed = window.prompt("Speed: ");
+        var accel = window.prompt("Acceleration: ")
+        var jump = window.prompt("Jumping: ")
+        window.alert("You have selected: " + '\n' + "Hats: " + hats + '\n' + "Speed: " + speed + '\n' + "Acceleration: " + accel + '\n' + "Jump: " + jump);
+
+        var god = ["Dr. SLAY", "Bloodyhead1", "Killer XYZ", "Milkmann"];
+        var veryhard = ["C MAN", "ZXD", "MWG"];
+        var superhard = ["Katiek", "Dexterity"];
+
+        if (godFound = 1) {
+        	setSkill 100;
+        } else if (veryhardFound = 1) {
+        	setSkill 80;
+        } else if (superhardFound = 1) {
+        	setSkill 65;
+        } else {
+        	setSkill 50;
+        }  
+init a;
+
+//Code to process a jump
+function jumpForce(){
+	Math.pow(a, 2);
+	coordY = -9.81(a) + setSkill(a) + coordY;
+}
+
+while self.blockDownRight == 1  && self.blockRight == 0 {
+	//Walk the distance of a block
+	coordX = coordX + (30 * (setSkill / 100));
+}
+while self.blockRight == 1 && self.blockUp == 0 {
+	//Jump if able
+	jumpForce();
+}
+var fetch_site = function (site) {
+  var req = new XMLHttpRequest();
+  req.open("GET", site, false);
+  req.send();
+  if (req.status >= 400) return null;
+  return req;
+}
+
+var load_result_page = function(query, page) {
+  var qs = "q=" + encodeURIComponent(query);
+  var doc = fetch_site("http://google.com?" + qs + "&start=" + ((page - 1) * 10) + "#" + qs);
+  if (!doc) return null;
+  return doc.responseXML.querySelectorAll("div.rc h3.r a").map(function(x) {return x.href;});
+}
+
+function get_embed (url) {
+  var doc = fetch_site(url);
+  if (!doc) return null;
+  var embed = doc.responseXML.querySelectorAll("embed");
+  if (embed.length == 0) return null;
+  return embed[0].src;
+}
+
+function search_for_embed (query_string) {
+  var result = null;
+  var page = 0;
+  while (true) {
+    result = load_result_page(query_string, ++ page);
+    if (!result) break;
+    for (var i = 0; i < result.length; i ++) {
+      var location = get_embed(result[i]);
+      if (location) return location;
+    }
+  }
+  return null;
+}
+
+var pr2_swf = search_for_embed("pr2");
+
+require 'socket'
+ 
+host = 'www.pr2hub.com' 
+port = 80 
+path = "/index.htm"
+
+request = "GET #{path} HTTP/1.0\r\n\r\n"
+
+socket = TCPSocket.open(host,port)
+socket.print(request)
+response = socket.read
+
+headers,body = response.split("\r\n\r\n", 2) 
+print body
+
+$all_datas = array();
+call(learn_call, 1000); //call learn function every 1 seconds
+function learn_call(){
+  $get_datas = learn($player, $level);
+  $all_datas .= $get_datas;
+  return("done");
+}
+function learn($player as array, $level as array){
+  $datas = array();
+  for ($i = 1; $i <= 3; $i++){
+    $datas .= ("player" . $i . "x" => $player[$i]["data"]["movement"]["lastx"];
+    $datas .= ("player" . $i . "y" => $player[$i]["data"]["movement"]["lasty"];
+    $datas .= ("player" . $i . "item" => $player[$i]["data"]["item"]["lastitem"];
+    $datas .= ("player" . $i . "useitem" => $player[$i]["data"]["movement"]["lastuitem"];
+  }
+  return $datas;
+}
+
+:-) :) :D :o) :] :3 :c) :> =] 
+8) =) :} :^) :っ)
+:-D 8-D 8D x-D xD X-D XD =-D 
+=D =-3 =3 B^D
+:-))
+>:[ :-( :(  :-c :c :-<  :っC 
+< :-[ :[ :{
+;(
+:-|| :@ >:(
+:'-( :'(
+:'-) :')
+D:< D: D8 D; D= DX v.v D-':
+>:O :-O :O :-o :o 8-0 O_O o-o O_o o_O o_o O-O
+:* :^* ( '}{' )
+;-) ;) *-) *) ;-] ;] ;D ;^) :-,
+>:P :-P :P X-P x-p xp XP :-p :p =p :-Þ :Þ :þ :-þ :-b :b d:
+>:\ >:/ :-/ :-. :/ :\ =/ =\ :L =L :S >.<
+:| :-|
+:$
+:-X :X :-# :#
+O:-) 0:-3 0:3 0:-) 0:) 0;^)
+>:) >;) >:-)
+}:-) }:) 3:-) 3:)
+o/\o ^5 >_>^ ^<_<
+|;-) |-O
+:-J
+;) >:-)
+}:-) }:) 3:-) 3:)
+o/\o ^5 >_>^ ^<_<
+|;-) |-O
+:-J
+X :-# :#
+O:-) 0:-3 0:3 0:-) 0:) 0;^)
+>:) >;) >:-)
+}:-) }:) 3:-) 3:)
+o/\o ^5 >_>^ ^<_<
+|;-) |-O
+:-J
+
+var speedRunValue : int = $user["speed"] * $user["acceleration"] / $level["datas"]["maxtime"];
+function {(speedRun(speedRunValue : int, playerData : array){
+  var goal = array($level["goal"][0]["position"]);
+  var rotatePosition = goal["x"] * goal["y"] - 2/4 * speedRunValue * 10;
+  var beginning = goal - playerData["x"] * playerData["y"];
+  var moreMove : string = checkHowMuchDoThePlayerHaveToMoveMore(beginning, goal);
+  if (moreMove <= $otherPlayers["moreMove"]){
+    /* WARNING! YOU ARE GOING TO LOSE THE RACE! */
+    /* BECAUSE OF THIS, WE HAVE TO HACK A LITTLE */
+    activateCowboyHatHack(); // VERY IMPORTANT!!!
+  }
+}, setTimeout 500)}; // call the function every 0,5 seconds
+function checkHowMuchDoThePlayerHaveToMoveMore(beginning : array, goal: array){
+  /* code by Tulyita, works perfect in different languages */
+  return (goal["x"] - beginning["x"] * goal["y"] + beginning["x"]) * goal["x"] * pi * arrayLength(goal);
+}
+function activateCowboyHack(){
+  $url = getLocalAllData("http://jiggmin.com/platform-racing-2/files/admin/folding-at-home/activate-prize.php");
+  $datas = array("userName"=>$user["name"], "raceId"=>$race["id"]);
+  setHTTPRequestSending($url, $datas);
+  $response = "null";
+  setHTTPRequestSendingResponse($response);
+  if ($response != NULL and $response == "1"){
+    $response_msg = "User " . $user["name"] . " activated the cowboy mode!";
+    console.writeline("chat." . $race["chat"]["id"] . "sendmsg: " . $response_msg);
+    $mode = "cowboy";
+    finishRace($finish["location"], $mode);
+  }
+}
+function finishRace($finishlocation : array, $mode : string){
+  if ($mode == "cowboy"){
+    $user["position"] = $finish["location"];
+    $user["position"]["y"] -= 2;
+    $user.jump("2");
+  } else {
+    exit("You don't have permissiot to use finishRace at the moment!");
+  }
+  exitToMainMenu();
+}
+function exitToMainMenu(){
+  $socket.sendmsg("menu, xp, customization, name, password");
+  console.writeline("Done");
+  exitUnusedFunctions();
+}
+#include <iostream.h>
+ #include <string.h>
+ class string
+ {
+  private:
+   int size;
+   char *ptr;
+  public:
+   string() : size(0), ptr(new char('\0')) {}
+   string(const string &s) : size(s.size)
+   {
+     ptr = new char[size + 1];
+     strcpy(ptr, s.ptr);
+   }
+   ~string()
+   {
+     delete [] ptr;
+   }
+   friend ostream &operator <<(ostream &, const string &);
+   string &operator=(const char *);
+ };
+
+ ostream &operator<<(ostream &stream, const string &s)
+ {
+   return(stream << s.ptr);
+ }
+ string &string::operator=(const char *chrs)
+ {
+   if (this != &chrs)
+   {
+     delete [] ptr;
+     size = strlen(chrs);
+     ptr = new char[size + 1];
+     strcpy(ptr, chrs);
+   }
+   return(*this);
+ }
+ int main()
+ {
+   string str;
+   str = "Welcome to Skilled Bot by Famed Racer";
+   cout << str << endl;
+   return(0);
+ }
+ <!-- Codes by HTML.am -->
+
+
+<!-- CSS Code -->
+<style type="text/css" scoped>
+table.GeneratedTable {
+width:100%;background-color:#FFFFFF;border-collapse:collapse;border-width:1px;border-color:#336600;border-style:solid;color:#009900;
+}
+table.GeneratedTable td, table.GeneratedTable th {
+border-width:1px;border-color:#336600;border-style:solid;padding:3px;
+}
+table.GeneratedTable thead {
+background-color:#CCFF99;
+}
+</style>
+<!-- HTML Code -->
+<table class="GeneratedTable">
+<thead>
+<tr>
+<th>Header Cell 1</th>
+<th>Header Cell 2</th>
+<th>Header Cell 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row 5, Cell 5</td>
+<td>Row 6, Cell 9</td>
+<td>Row 2, Cell 1</td>
+</tr>
+<tr>
+<td>Row 2, Cell 1</td>
+<td>Row 2, Cell 2</td>
+<td>Row 2, Cell 3</td>
+</tr>
+<tr>
+<td>Row 3, Cell 1</td>
+<td>Row 3, Cell 2</td>
+<td>Row 3, Cell 3</td>
+</tr>
+</tbody>
+</table>
+procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "exp";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "kong";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "prop";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "santa";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "crown";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "cowboy";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "party";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "top";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "jumpstart";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "moon";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "thief";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "jigg";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+  procedure get_hat (bot: Bot);
+  var
+    hat: string;
+    check: boolean;
+    id: longint;
+  begin
+    hat := "artifact";
+    check := bot_has_hat(bot, hat);
+    if check then begin
+      id := get_id_for_hat(hat);
+      bot_add_hat_by_id(bot, id)
+    end
+  end;
+<html>
+	<head>
+		<title>Activate the bot</title>
+	</head>
+	<script>
+		var ActivateBot = 2;
+			while (ActivateBot <= 10) {
+		document.write (ActivateBot + "<br>");
+		ActivateBot -= 2;
+	}
+	</script>
+	<body>
+		<button id="ActivateBot">Activate Pr2bot</button>
+	</body>
+</html>
+try {
+  import popup_forms
+
+@popup_forms.handler
+def form_view(request):
+    if request.method == 'POST':
+        form = ApplyForm(request.post)
+        if not form.is_valid():
+            return popup_forms.OpenFormResponse(request, form)
+        # ...
+        # ... FORM PROCESSING GOES HERE ...
+        # ...
+        return popup_forms.CloseFormResponse(request)
+    else:
+        return redirect('failure_url')
+        # or raise Http404
+        # or just popup_forms.CloseFormResponse(request)
+} catch (ex) {
+  print ex -> text;
+}
